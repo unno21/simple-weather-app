@@ -17,7 +17,7 @@ SELECT
     GROUP_CONCAT(
             CASE
                 WHEN `role` = 1 THEN 'Trainer'
-                WHEN `role` = 2 THEN 'Assesor'
+                WHEN `role` = 2 THEN 'Assessor'
                 ELSE 'Staff'
                 END
                 SEPARATOR '/') AS `Roles`
