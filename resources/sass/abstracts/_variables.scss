@@ -1,0 +1,80 @@
+// Body
+$body-bg:                  #F6F9FB;
+$border-radius:            10px !default;
+
+
+// Colors
+$blue:                     #2979ff !default;
+$neutral:                  #C3CFDA !default;
+$dark:                     #384658 !default;
+$secondary:                $dark !default;
+
+
+// Typography
+$font-family-sans-serif:   'Poppins', sans-serif !default;
+$font-size-base:           .875rem;
+$line-height-base:         1.2;
+
+
+// Buttons + Forms
+//
+// Shared config that are reassigned to `$input-` and `$btn-` specific config.
+$input-btn-padding-y:      1rem !default;
+$input-btn-padding-x:      1rem !default;
+$input-btn-focus-width:    .2rem !default;
+$input-btn-focus-color:    $blue !default;
+$input-btn-focus-box-shadow: 0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+$input-disabled-bg:         #F0F5F9 !default;
+
+$btn-font-size:            .75rem !default;
+
+$custom-checkbox-indicator-border-radius: .2rem !default;
+$custom-control-indicator-focus-box-shadow: 0 0 0 .1rem $input-btn-focus-color !default;
+
+
+// Cards
+
+$card-height:              auto !default;
+$card-border-width:        0 !default;
+$card-bg:                  #FFFFFF !default;
+$card-spacer-y:            1.25rem !default;
+$card-spacer-x:            1.25rem !default;
+$card-border-radius:       $border-radius !default;
+
+$card-cap-bg:              #F0F5F9 !default;
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-bg:              #FFFFFF !default;
+$dropdown-border-width:    0 !default;
+$dropdown-box-shadow:      0 0 30px 0 rgba(0, 0, 0, 0.1) !default;
+$dropdown-link-hover-bg:   #F0F5F9;
+$border-color:             #ced4da !default;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-hover-bg:           #F0F5F9 !default;
+$table-accent-bg:          $table-hover-bg !default;
+$table-striped-order:      odd !default;
+
+
+// Modals
+
+// Padding applied to the modal body
+
+$modal-content-border-width:  0 !default;
+$modal-content-border-radius: 10px !default;
+
+// Tabs
+
+$nav-tabs-border-width:    0 !default;
+$nav-tabs-link-active-bg:  #fff !default;
+$nav-link-padding-x:       1.5rem !default;
+$nav-link-padding-y:       1rem !default;
+

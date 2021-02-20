@@ -1,0 +1,9 @@
+@mixin make-font-weight($name, $value) {
+    .font-weight-#{$name} {
+        font-weight: $value;
+    }
+}
+
+@each $name, $value in $font-weight {
+    @include make-font-weight($name, $value)
+}

@@ -1,0 +1,37 @@
+.navigation {
+  @extend .bg-white;
+  border-radius: 10px;
+  box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.05);
+  nav {
+    @extend .d-flex;
+    .navlink {
+      @extend .text-uppercase, .d-block, .p-3, .text-16, .position-relative, .overflow-hidden;
+      color: get('color.dark.100');
+      &:hover {
+        text-decoration: none;
+        color: get('color.primary');
+      }
+      &.active {
+        color: get('color.primary');
+        &:after {
+          opacity: 1;
+          width: 100%;
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+      &:after {
+        content: '';
+        transition: all .3s;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        position: absolute;
+        height: 4px;
+        background-color: get('color.primary');
+        opacity: 0;
+      }
+    }
+  }
+}

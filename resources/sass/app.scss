@@ -1,0 +1,18 @@
+// Abstracts
+@import 'abstracts/variables';
+@import "abstracts/functions";
+@import "abstracts/config";
+@import "abstracts/mixin";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+@import '~bootstrap-vue/src/index.scss';
+
+// Vue Select
+@import "~vue-select/src/scss/vue-select";
+
+// Custom
+@import "custom/style";
+
+// Main
+@import "main/style";

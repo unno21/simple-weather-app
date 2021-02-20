@@ -1,0 +1,9 @@
+@mixin make-letter-spacing($name, $value) {
+    .text-spacing-#{$name} {
+        letter-spacing: $value;
+    }
+}
+
+@each $name, $value in $letter-spacing {
+    @include make-letter-spacing($name, $value)
+}

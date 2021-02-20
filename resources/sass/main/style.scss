@@ -1,0 +1,202 @@
+@import "navbar";
+@import "navigation";
+
+.main-container {
+  @extend .position-relative;
+  .sidenav-container {
+    .sidenav {
+      @extend .position-fixed, .bg-white;
+      left: -300px;
+      top: 0;
+      bottom: 0;
+      height: 100vh;
+      width: 300px;
+      transition: all .3s;
+      z-index: 9;
+      &.is-open {
+        left: 0;
+      }
+      @include media-breakpoint-up(lg) {
+        left: 0;
+      }
+      .sidenav-wrapper {
+        @extend .h-100, .px-4, .py-3;
+        overflow-y: auto;
+        z-index: 99;
+        .logo {
+          @extend .mb-4;
+          height: 3rem;
+        }
+        .intro-card {
+          @extend .w-100;
+          .total-data-representation-wrapper {
+            margin-top: 2rem;
+            .total-data-representation {
+              @extend .text-center, .position-relative, .mb-3;
+              padding-bottom: .75rem;
+              .total-data-title {
+                @extend .text-20, .d-block, .font-weight-700;
+                @include media-breakpoint-up(lg) {
+                  font-size: 1.5rem;
+                }
+              }
+              .total-data-label {
+                @extend .text-uppercase, .d-block, .text-12;
+                color: get('color.dark.200');
+              }
+              &:not(:last-child) {
+                &:after {
+                  content: '';
+                  width: 4rem;
+                  height: 1px;
+                  background: get('color.light.300');
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
+                }
+              }
+            }
+          }
+        }
+        .calendar-card {
+          @extend .w-100;
+          .time {
+            .time-text {
+              @extend .text-center, .text-32, .font-weight-700;
+              @include media-breakpoint-up(md) {
+                font-size: 2rem;
+              }
+              @include media-breakpoint-up(lg) {
+                font-size: 3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .sidenav-backdrop {
+      @extend .position-fixed;
+      display: none;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background: rgba(0, 0, 0, .4);
+      backdrop-filter: blur(5px);
+      z-index: 8;
+      &.is-open {
+        display: block;
+      }
+    }
+  }
+  .main-wrapper {
+    padding: 1rem;
+    @include media-breakpoint-up(lg) {
+      padding: 1.5rem 3rem 1.5rem;
+      width: calc(100% - 300px);
+      margin-left: 300px;
+    }
+
+    .main-area {
+      .date-range-button-container {
+        @extend .d-flex, .flex-wrap;
+        .date-range-button {
+          @extend .position-relative;
+          .btn {
+            border-radius: 0 !important;
+          }
+          .date-range-radio {
+            position: absolute;
+            //clip: rect(0,0,0,0);
+            pointer-events: none;
+          }
+        }
+      }
+    }
+  }
+}
+.intro-card,
+.calendar-card {
+  .card-title {
+    @extend .text-center, .text-uppercase, .font-weight-600, .text-16, .mb-2;
+    color: get('color.dark.300');
+    line-height: 1;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.25rem;
+    }
+  }
+}
+.login-backdrop {
+  @extend .position-fixed, .align-items-center, .justify-content-center;
+  display: flex;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: $body-bg;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+}
+.login-container {
+  min-height: 100vh;
+  .logo {
+    @extend .d-block;
+    height: 4rem;
+  }
+  .login-bg {
+    background: url('/images/login-bg.svg') no-repeat right/cover;
+  }
+}
+
+.current-temperature {
+    @extend .text-24, .font-weight-700;
+    @include media-breakpoint-up(lg) {
+        font-size: 3rem;
+    }
+}
+.weather-five-days {
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    .weather-content {
+        .weather-day, .weather-temp {
+            @extend .d-block, .text-center;
+        }
+    }
+}
+.venue {
+    display: grid;
+    gap: 1.5rem;
+    @include media-breakpoint-up(md) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .venue-card {
+        .venue-img {
+            @extend .position-relative, .overflow-hidden;
+            border-radius: 10px;
+            img {
+                object-fit: cover;
+            }
+            @include media-breakpoint-up(md) {
+                height: 250px;
+            }
+        }
+        @include media-breakpoint-up(md) {
+            &:nth-child(even) {
+                margin-top: 3rem;
+            }
+        }
+        .description {
+            text-align: center;
+            @include media-breakpoint-up(md) {
+                text-align: left;
+            }
+        }
+    }
+}

@@ -1,0 +1,53 @@
+$mea-config : deep-map-merge(
+    (
+        'color' : (
+            'primary': $blue,
+            'light' : (
+                '900' : #9AACBB,
+                '800' : #A3B4C3,
+                '700' : #AEBDCB,
+                '600' : #B8C6D2,
+                '500' : $neutral,
+                '400' : #CED8E2,
+                '300' : #D9E2EA,
+                '200' : #E4EBF1,
+                '100' : #F0F5F9,
+            ),
+            'dark' : (
+                '900': #020304,
+                '800': #0E1319,
+                '700': #1B232E,
+                '600': #293443,
+                '500': $dark,
+                '400': #49596D,
+                '300': #5B6C82,
+                '200': #6E8097,
+                '100': #8295AC,
+            )
+        ),
+    ),
+    $mea-config,
+    true
+);
+
+//$color: (
+//    'primary': $blue,
+//    'light-900' : #9AACBB,
+//    'light-800' : #A3B4C3,
+//    'light-700' : #AEBDCB,
+//    'light-600' : #B8C6D2,
+//    'light-500' : $neutral,
+//    'light-400' : #CED8E2,
+//    'light-300' : #D9E2EA,
+//    'light-200' : #E4EBF1,
+//    'light-100' : #F0F5F9,
+//    'dark-900' : #020304,
+//    'dark-800' : #0E1319,
+//    'dark-700' : #1B232E,
+//    'dark-600' : #293443,
+//    'dark-500' : $dark,
+//    'dark-400' : #49596D,
+//    'dark-300' : #5B6C82,
+//    'dark-200' : #6E8097,
+//    'dark-100' : #8295AC,
+//) !default;

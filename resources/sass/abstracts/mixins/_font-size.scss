@@ -1,0 +1,9 @@
+@mixin make-font-size($name, $value) {
+    .text-#{$name} {
+        font-size: $value;
+    }
+}
+
+@each $name, $value in $font-size {
+    @include make-font-size($name, $value)
+}

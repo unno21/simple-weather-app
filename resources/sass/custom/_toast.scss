@@ -1,0 +1,24 @@
+.custom-toast {
+    border: 0;
+    box-shadow: 0 10px 24px -6px rgba(0, 0, 0, 0.1);
+
+    .custom-toast-body {
+        background-color: get('color.dark.700') !important;
+        border-radius: 10px;
+    }
+
+    .close-toast {
+        @extend .text-white, .text-uppercase, .text-spacing-2, .border-0, .text-message;
+        border-radius: 5px;
+        background: get('color.dark.400');
+        padding: .5rem 1rem;
+    }
+
+    .text-message {
+        font-size: .75rem;
+    }
+
+    .custom-toast-icon {
+        height: 2rem;
+    }
+}

@@ -1,0 +1,14 @@
+$font-size: deep-map-merge(
+    (
+        '12' : .75rem,
+        '14' : .875rem,
+        '16' : 1rem,
+        '20' : 1.25rem,
+        '24' : 1.5rem,
+        '32' : 2rem,
+        '48' : 3rem,
+        '64' : 4rem,
+    ),
+    $font-size,
+    true
+);
